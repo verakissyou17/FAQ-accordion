@@ -27,8 +27,8 @@ FAQ accordion
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/faq-accordion-challenge-TmXwv0y4m7)
+- Live Site URL: [Github Pages](https://verakissyou17.github.io/FAQ-accordion/)
 
 ## My process
 
