@@ -19,6 +19,14 @@
   body {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--Light-pink);
+    background-image: url(./images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   hr {
@@ -29,28 +37,19 @@
     opacity: .1;
   }
 
-  .purple-wrapper {
-    background-image: url(./images/background-pattern-desktop.svg);
-    height: 272px;
-    width: 100%;
-    position: relative;
-  }
-
   .wrapper {
     background-color: var(--White);
-    width: 42%;
+    width: 100%;
     max-width: 600px;
-    padding: 1.5em;
-    margin: 0 auto;
+    line-height: 1.5;
+    padding: 1em;
+    margin: 5em auto;
     border-radius: 20px;
     box-shadow: 3px 3px 30px hsla(293, 16%, 49%, 0.349);
-    position: absolute;
-    top: 120px;
-    left: 375;
-    right: 375px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
   }
 
   header {
@@ -65,19 +64,13 @@
     margin-left: .5em;
   }
 
-  .details {
-    padding: 0 1.5em 1.5em;
-    color: var(--Grayish-purple);
-    font-size: 1rem;
-}
-
   .answer {
     display: none;
   }
 
   .visible {
     display: inline-block;
-    padding: 0 1.5em 1.5em;
+    padding-inline: 1.5em;
     color: var(--Grayish-purple);
     font-size: 1rem;
   }
@@ -86,12 +79,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em;
+    padding: 1em;
   }
 
   .accordion h2 {
     font-size: 1.125rem;
     font-weight: var(--ftw-600);
+    padding: .5em;
     color: var(--Dark-purple);
   }
 
@@ -100,8 +94,7 @@
   }
 
    .attribution { 
-    padding-top: 100vh;
-    padding-bottom: 3em;
+    padding-block: 3em;
     font-size: 11px; 
     text-align: center; 
   }
@@ -111,12 +104,6 @@
     }
 
     @media (max-width: 700px) {
-      .wrapper {
-        padding: 1em;
-        width: 90%;
-        left: 5%;
-        right: 5%;
-      }
 
       header img {
         width: 25px;
@@ -126,15 +113,7 @@
         font-size: 2rem
       }
 
-      .accordion {
-        padding: 1em;
-      }
-
       .accordion h2 {
         font-size: .75rem;
-      }
-
-      .details {
-        padding: 0 1em 1em;
       }
     }

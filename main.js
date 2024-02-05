@@ -5,9 +5,16 @@ console.log(titles)
 const minusBtn = document.querySelector(".js-minus-btn")
 const details = document.querySelector(".js-details")
 const firstTitle = document.querySelector(".first--title")
+let isVisible = true
 images.forEach((image, index) => {
   image.addEventListener("click", () => {
     answers[index].classList.toggle("visible")
+    isVisible = !isVisible
+    if (isVisible) {
+      image.src = "./images/icon-plus.svg"
+    } else {
+      image.src = "./images/icon-minus.svg"
+    }
   })
 })
 
