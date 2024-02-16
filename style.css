@@ -10,7 +10,9 @@
     --ftw-700: 700;
   }
 
-  *, *::after, *::before {
+  *, 
+  *::after, 
+  *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -21,12 +23,15 @@
     background-color: var(--Light-pink);
     background-image: url(./images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-position: top;
+    background-size: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    min-height: 100vh;
+    line-height: 1.5rem;
   }
 
   hr {
@@ -41,11 +46,10 @@
     background-color: var(--White);
     width: 100%;
     max-width: 600px;
-    line-height: 1.5;
     padding: 1em;
-    margin: 5em auto;
+    margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 3px 3px 30px hsla(293, 16%, 49%, 0.349);
+    box-shadow: 5px 5px 30px hsla(293, 16%, 49%, 0.349);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,7 +64,7 @@
   h1 {
     color: var(--Dark-purple);
     font-weight: var(--ftw-700);
-    font-size: 3.5rem;
+    font-size: clamp(1.5rem, 4.5vw, 3rem);
     margin-left: .5em;
   }
 
@@ -73,6 +77,7 @@
     padding-inline: 1.5em;
     color: var(--Grayish-purple);
     font-size: 1rem;
+    transition: all 1s ease-in-out;
   }
 
   .accordion {
@@ -83,7 +88,7 @@
   }
 
   .accordion h2 {
-    font-size: 1.125rem;
+    font-size: clamp(1.1rem, 2.4vw, 1.2rem);
     font-weight: var(--ftw-600);
     padding: .5em;
     color: var(--Dark-purple);
@@ -103,17 +108,13 @@
       color: hsl(228, 45%, 44%); 
     }
 
-    @media (max-width: 700px) {
+    @media (width < 500px) {
 
       header img {
         width: 25px;
       }
 
-      h1 {
-        font-size: 2rem
-      }
-
-      .accordion h2 {
-        font-size: .75rem;
+      .wrapper {
+        max-width: 365px;
       }
     }
